@@ -15,12 +15,13 @@ const logos = [
   { name: 'vite', title: 'Vite', href: 'https://vite.dev/' },
   { name: 'vue', title: 'Vue', href: 'https://vuejs.org/' },
   { name: 'vuetify', title: 'Vuetify', href: 'https://vuetifyjs.com/' },
-  { name: 'pinia', title: 'Pinia', href: 'https://pinia.vuejs.org/' },
-  { name: 'vitest', title: 'Vitest', href: 'https://vitest.dev/' },
-  { name: 'vueuse', title: 'VueUse', href: 'https://vueuse.org/' },
-  { name: 'playwright', title: 'Playwright', href: 'https://playwright.dev/' },
-  { name: 'prettier', title: 'Prettier', href: 'https://prettier.io/' },
   { name: 'tailwindcss', title: 'TailwindCSS', href: 'https://tailwindcss.com/' },
+  { name: 'pinia', title: 'Pinia', href: 'https://pinia.vuejs.org/' },
+  { name: 'vueuse', title: 'VueUse', href: 'https://vueuse.org/' },
+  { name: 'vitest', title: 'Vitest', href: 'https://vitest.dev/' },
+  { name: 'playwright', title: 'Playwright', href: 'https://playwright.dev/' },
+  { name: 'eslint', title: 'ESLint', href: 'https://eslint.org/' },
+  { name: 'prettier', title: 'Prettier', href: 'https://prettier.io/' },
   { name: 'unplugin', title: 'Unplugin', href: 'https://unplugin.unjs.io/' },
 ]
 
@@ -77,23 +78,26 @@ onMounted(() => {
 .logo.vuetify:hover {
   filter: drop-shadow(0 0 2em #1697f6) drop-shadow(0 0 1em #1867c0);
 }
+.logo.tailwindcss:hover {
+  filter: drop-shadow(0 0 2em #38bdf8) drop-shadow(0 0 1em #0ea5e9);
+}
 .logo.pinia:hover {
   filter: drop-shadow(0 0 2em #ffe56c) drop-shadow(0 -1em 1em #52ce63);
-}
-.logo.vitest:hover {
-  filter: drop-shadow(0 0 2em #fcc72b) drop-shadow(0 0 1em #729b1b);
 }
 .logo.vueuse:hover {
   filter: drop-shadow(0 0 2em #42b883) drop-shadow(0 0 1em #35495e);
 }
+.logo.vitest:hover {
+  filter: drop-shadow(0 0 2em #fcc72b) drop-shadow(0 0 1em #729b1b);
+}
 .logo.playwright:hover {
   filter: drop-shadow(1em 0 2em #2ead33) drop-shadow(-1em 0 1em #e2574c);
 }
+.logo.eslint:hover {
+  filter: drop-shadow(0 0 2em #4b32c3) drop-shadow(0 0 1em #35495e);
+}
 .logo.prettier:hover {
   filter: drop-shadow(0 0 2em #56b3b4) drop-shadow(0 0 1em #ea5e5e);
-}
-.logo.tailwindcss:hover {
-  filter: drop-shadow(0 0 2em #38bdf8) drop-shadow(0 0 1em #0ea5e9);
 }
 .logo.unplugin:hover {
   filter: drop-shadow(0 0 2em #d4d4d4) drop-shadow(0 0 1em #a0a0a0);
