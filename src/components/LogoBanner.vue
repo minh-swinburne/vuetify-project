@@ -2,7 +2,7 @@
   <div ref="marquee" class="logo-marquee">
     <div ref="track" class="logo-track">
       <a v-for="logo in logos" :key="logo.name" :href="logo.href" :title="logo.title" target="_blank">
-        <img :src="`/src/assets/${logo.name}.svg`" :alt="logo.title" :class="['logo', logo.name]" />
+        <img :src="`/${logo.name}.svg`" :alt="logo.title" :class="['logo', logo.name]" />
       </a>
     </div>
   </div>
@@ -44,7 +44,7 @@ onMounted(() => {
 
 <style scoped>
 .logo-marquee {
-  /* overflow: hidden; */
+  overflow: hidden;
   width: 100%;
   background: transparent;
   padding: 3.5rem 0;
