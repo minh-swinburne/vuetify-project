@@ -1,3 +1,13 @@
+# User-specific files
+.DS_Store
+.idea
+.vscode
+.cursorrules
+.cursor
+.cursorignore
+.cursorignore
+.husky
+
 # Logs
 logs
 *.log

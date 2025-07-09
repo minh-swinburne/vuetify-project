@@ -1,16 +1,15 @@
 <template>
-  <v-container class="fill-height" max-width="900">
+  <LogoBanner class="tw:mt-8!" />
+  <VContainer max-width="900">
     <div>
-      <v-img class="mb-4" height="150" src="@/assets/logo.png" />
-
       <div class="mb-8 text-center">
-        <div class="text-body-2 font-weight-light mb-n1">Welcome to</div>
-        <h1 class="text-h2 font-weight-bold">Vuetify</h1>
+        <!-- <div class="text-body-2 font-weight-light mb-n1">Welcome to</div> -->
+        <h1 class="text-h2 font-weight-bold">You did it!</h1>
       </div>
 
-      <v-row>
-        <v-col cols="12">
-          <v-card
+      <VRow>
+        <VCol cols="12">
+          <VCard
             class="py-4"
             color="surface-variant"
             image="https://cdn.vuetifyjs.com/docs/images/one/create/feature.png"
@@ -19,7 +18,7 @@
             variant="tonal"
           >
             <template #image>
-              <v-img position="top right" />
+              <VImg position="top right" />
             </template>
 
             <template #title>
@@ -32,11 +31,11 @@
                 <v-kbd>components/HelloWorld.vue</v-kbd>.
               </div>
             </template>
-          </v-card>
-        </v-col>
+          </VCard>
+        </VCol>
 
-        <v-col v-for="link in links" :key="link.href" cols="6">
-          <v-card
+        <VCol v-for="link in links" :key="link.href" cols="6">
+          <VCard
             append-icon="mdi-open-in-new"
             class="py-4"
             color="surface-variant"
@@ -49,13 +48,15 @@
             :title="link.title"
             variant="tonal"
           />
-        </v-col>
-      </v-row>
+        </VCol>
+      </VRow>
     </div>
-  </v-container>
+  </VContainer>
 </template>
 
 <script setup lang="ts">
+import LogoBanner from './LogoBanner.vue'
+
 const links = [
   {
     href: 'https://vuetifyjs.com/',
