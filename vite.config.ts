@@ -15,6 +15,8 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  envDir: '.',
+  envPrefix: 'VITE_',
   plugins: [
     Tailwindcss(),
     VueRouter({
@@ -77,7 +79,10 @@ export default defineConfig({
     extensions: ['.js', '.json', '.jsx', '.mjs', '.ts', '.tsx', '.vue'],
   },
   server: {
-    port: process.env.CI ? 4173 : 5173,
+    port: 5173,
+  },
+  preview: {
+    port: 4173,
   },
   css: {
     preprocessorOptions: {

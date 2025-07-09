@@ -9,8 +9,8 @@ import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
 
 // Composables
-import { createVuetify } from 'vuetify'
 import { usePreferredColorScheme } from '@vueuse/core'
+import { createVuetify } from 'vuetify'
 
 const preferredColor = usePreferredColorScheme()
 
@@ -21,8 +21,12 @@ const vuetify = createVuetify({
   },
 })
 
-watch(preferredColor, (newVal) => {
-  vuetify.theme.global.name.value = newVal
-}, { immediate: true })
+watch(
+  preferredColor,
+  (newVal) => {
+    vuetify.theme.global.name.value = newVal
+  },
+  { immediate: true },
+)
 
 export default vuetify
