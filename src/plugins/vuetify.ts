@@ -10,10 +10,19 @@ import 'vuetify/styles'
 
 // Composables
 import { createVuetify } from 'vuetify'
+import { usePreferredColorScheme } from '@vueuse/core'
+
+const preferredColor = usePreferredColorScheme()
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
-export default createVuetify({
+const vuetify = createVuetify({
   theme: {
-    defaultTheme: 'dark',
+    defaultTheme: preferredColor.value,
   },
 })
+
+watch(preferredColor, (newVal) => {
+  vuetify.theme.global.name.value = newVal
+}, { immediate: true })
+
+export default vuetify
