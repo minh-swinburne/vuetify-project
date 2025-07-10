@@ -1,5 +1,5 @@
 <template>
-  <v-footer app height="40">
+  <VFooter app height="40">
     <a
       v-for="item in items"
       :key="item.title"
@@ -9,7 +9,7 @@
       target="_blank"
       :title="item.title"
     >
-      <v-icon :icon="item.icon" :size="item.icon === '$vuetify' ? 24 : 16" />
+      <VIcon :icon="item.icon" :size="item.icon === '$vuetify' ? 24 : 16" />
     </a>
 
     <div class="text-caption text-disabled" style="position: absolute; right: 16px">
@@ -25,7 +25,7 @@
         MIT License
       </a>
     </div>
-  </v-footer>
+  </VFooter>
 </template>
 
 <script setup lang="ts">
