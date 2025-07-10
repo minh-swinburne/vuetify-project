@@ -8,6 +8,11 @@
 .cursorignore
 .husky
 
+# Test results, report and coverage
+test-results/
+playwright-report/
+coverage/
+
 # Logs
 logs
 *.log
